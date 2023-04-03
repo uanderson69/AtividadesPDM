@@ -1,0 +1,121 @@
+atv1:
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  print('Digite um ponto:');
+  int x1 = int.parse(stdin.readLineSync()!);
+
+  print('Digite um ponto:');
+  int x2 = int.parse(stdin.readLineSync()!);
+
+  print('Digite um ponto:');
+  int y1 = int.parse(stdin.readLineSync()!);
+
+  print('Digite um ponto:');
+  int y2 = int.parse(stdin.readLineSync()!);
+
+  // cálculo da distância entre os pontos
+  double D = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+
+  print(D);
+}
+
+atv2:
+import 'dart:io';
+void main() {
+print('Digite um numero:');
+  var a = double.parse(stdin.readLineSync()!);
+  
+  print('Digite um segundo numero:');
+  var b = double.parse(stdin.readLineSync()!);
+  
+  print('Digite um terceiro numero:');
+  var c = double.parse(stdin.readLineSync()!);
+
+  // Calcular a expressão
+  var r = (a+b)*(a+b);
+   var s= (b+c)*(b+c);
+
+  var d= (r+s)/2;
+
+    print('Resultado: $d');
+}
+
+atv3:
+import 'dart:io';
+void main() {
+ print('Digite a primeira nota:');
+  var nota1 = double.parse(stdin.readLineSync()!);
+  
+  print('Digite a segunda nota:');
+  var nota2 = double.parse(stdin.readLineSync()!);
+  
+  print('Digite a terceira nota:');
+  var nota3 = double.parse(stdin.readLineSync()!);
+  
+  // Calcular a média ponderada com os pesos de 2, 3 e 5 para cada nota
+  var media = (nota1 * 2 + nota2 * 3 + nota3 * 5) / 10;
+  
+  // Imprimir a média final para o usuário
+  print('A média final do aluno é: $media');
+}
+
+atv6:
+import 'dart:io';
+void main() {
+  
+  int tempoEmSegundos = 0;
+  int segundos = 0;
+  int minutos = 0;
+  int horas = 0;
+  
+  print("Digite a duração do evento em segundos: ");
+  tempoEmSegundos = int.parse(stdin.readLineSync()!);
+  
+  horas = tempoEmSegundos ~/ 3600;
+  minutos = (tempoEmSegundos % 3600) ~/ 60;
+  segundos = (tempoEmSegundos % 3600) % 60;
+  
+
+  print("O tempo de duração do evento em horas, minutos e segundos é: $horas hora(s), $minutos minuto(s) e $segundos segundo(s)");
+  
+}
+
+atv7:
+
+import 'dart:io';
+void main(){
+  double custoFabrica;
+  double custoDistribuidor;
+  double custoImpostos;
+  double custoConsumidor;
+  
+  print("Digite o custo de fábrica do carro: ");
+  custoFabrica = double.parse(stdin.readLineSync()!);
+  
+  custoDistribuidor = custoFabrica * (28/100);
+  custoImpostos = custoFabrica * (45/100);
+  custoConsumidor = custoFabrica + custoDistribuidor + custoImpostos;
+  
+  print("O custo ao consumidor do carro é: \$$custoConsumidor");
+}
+
+atv8:
+
+import 'dart:io';
+void main() {
+  print('Insira os coeficientes a,b,c,d,e e f: ');
+  double a = double.parse(stdin.readLineSync()!);
+  double b = double.parse(stdin.readLineSync()!);
+  double c = double.parse(stdin.readLineSync()!);
+  double d = double.parse(stdin.readLineSync()!);
+  double e = double.parse(stdin.readLineSync()!);
+  double f = double.parse(stdin.readLineSync()!);
+  
+  double x = (c*e - b*f) / (a*e - b*d);
+  double y = (a*f - c*d) / (a*e - b*d);
+  
+  print('O valor de x é: $x');
+  print('O valor de y é: $y');
+}
